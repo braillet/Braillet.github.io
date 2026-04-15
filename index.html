@@ -49,11 +49,22 @@
             border-radius: 4px;
             transition: all 0.3s ease;
             border: 2px solid #000000;
+            cursor: pointer;
         }
 
         .insta-btn:hover {
             background-color: transparent;
             color: #000000;
+        }
+
+        /* Style for the "Updates soon" message */
+        #update-message {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
 
         footer {
@@ -69,14 +80,29 @@
 
     <div class="content-wrapper">
         <h1>BRAILLET</h1>
-        <p>Innovation in every touch.</p>
+        <p>The digital analog braille assistant.</p>
         
-        <a href="#" target="_blank" class="insta-btn">FOLLOW ON INSTAGRAM</a>
+        <a href="https://www.instagram.com/yourusername" 
+           target="_blank" 
+           class="insta-btn" 
+           id="instaLink">FOLLOW ON INSTAGRAM</a>
+
+        <div id="update-message">UPDATES SOON</div>
     </div>
 
     <footer>
         &copy; 2026 BRAILLET
     </footer>
+
+    <script>
+        const link = document.getElementById('instaLink');
+        const message = document.getElementById('update-message');
+
+        link.addEventListener('click', function() {
+            // Makes the hidden text visible when clicked
+            message.style.opacity = "1";
+        });
+    </script>
 
 </body>
 </html>
